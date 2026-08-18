@@ -142,3 +142,465 @@
     color: var(--color-foreground);
   }
 }
+
+/* ─────────────────────────────────────────────
+   Landing "Acompañamiento VIP 30 Días"
+   Design system dedicado (tokens locais)
+   ───────────────────────────────────────────── */
+
+.vip-page {
+  --deep: #0b4f3b;
+  --deep-mid: #1a7059;
+  --jade: #10b981;
+  --jade-light: #34d399;
+  --warm-white: #f0fdf8;
+  --vip-text: #0d2b1e;
+  --text-soft: #2d6b52;
+  --green-cta: #1e7e34;
+
+  font-family: "Lato", sans-serif;
+  background: var(--warm-white);
+  color: var(--vip-text);
+  font-size: 17px;
+  line-height: 1.75;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.vip-page *,
+.vip-page *::before,
+.vip-page *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.vip-page .wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* TOPO */
+.vip-page .topo-contexto {
+  background: #e8fbf4;
+  border-bottom: 2px solid var(--jade);
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+.vip-page .topo-contexto strong {
+  color: var(--deep);
+}
+
+/* HERO */
+.vip-page .hero {
+  background: linear-gradient(160deg, var(--deep) 0%, var(--deep-mid) 100%);
+  color: #fff;
+  padding: 52px 20px 60px;
+  text-align: center;
+}
+.vip-page .hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.vip-page .hero-eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+.vip-page .hero h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(24px, 4.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  letter-spacing: -0.3px;
+}
+.vip-page .hero h1 em {
+  font-style: italic;
+  color: var(--jade-light);
+}
+.vip-page .hero-sub {
+  font-size: clamp(15px, 2.5vw, 17px);
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.vip-page .hero-sub strong {
+  color: #fff;
+}
+
+/* SECCIONES */
+.vip-page section {
+  padding: 48px 0;
+}
+.vip-page section + section {
+  border-top: 1px solid rgba(11, 79, 59, 0.08);
+}
+
+/* COPY */
+.vip-page .copy p {
+  margin-bottom: 18px;
+  font-size: 17px;
+  color: var(--vip-text);
+}
+.vip-page .copy p:last-child {
+  margin-bottom: 0;
+}
+.vip-page .copy strong {
+  color: var(--deep);
+  font-weight: 700;
+}
+
+/* SECTION TITLE */
+.vip-page .sec-title {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(20px, 3.5vw, 30px);
+  font-weight: 700;
+  color: var(--deep);
+  margin-bottom: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+.vip-page .sec-title em {
+  font-style: italic;
+  color: var(--jade);
+}
+
+/* TIMELINE */
+.vip-page .timeline {
+  list-style: none;
+  margin: 8px 0;
+  position: relative;
+}
+.vip-page .timeline::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--jade) 0%, var(--jade-light) 100%);
+}
+.vip-page .timeline li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 16px 0;
+  position: relative;
+}
+.vip-page .timeline li + li {
+  border-top: 1px solid rgba(11, 79, 59, 0.06);
+}
+.vip-page .timeline .week-num {
+  width: 44px;
+  height: 44px;
+  background: var(--jade);
+  color: #fff;
+  font-weight: 900;
+  font-size: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.vip-page .timeline .week-num.crisis {
+  background: var(--deep);
+  box-shadow: 0 0 0 3px var(--jade);
+}
+.vip-page .timeline .week-content {
+  padding-top: 4px;
+}
+.vip-page .timeline .week-label {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--deep);
+  display: block;
+  margin-bottom: 4px;
+}
+.vip-page .timeline .week-label.crisis {
+  color: var(--jade);
+}
+.vip-page .timeline .week-desc {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+.vip-page .timeline .crisis-badge {
+  display: inline-block;
+  background: var(--deep);
+  color: var(--jade-light);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 3px;
+  margin-left: 8px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+/* COMPARATIVO */
+.vip-page .comparativo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 8px 0;
+}
+.vip-page .comp-card {
+  border-radius: 10px;
+  padding: 24px 20px;
+  border: 2px solid transparent;
+}
+.vip-page .comp-card.sin {
+  background: #fff0f0;
+  border-color: #e0b0b0;
+}
+.vip-page .comp-card.con {
+  background: #f0faf2;
+  border-color: #a0d0b0;
+}
+.vip-page .comp-card h4 {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.vip-page .comp-card.sin h4 {
+  color: #c0392b;
+}
+.vip-page .comp-card.con h4 {
+  color: #1e7e34;
+}
+.vip-page .comp-card ul {
+  list-style: none;
+}
+.vip-page .comp-card ul li {
+  font-size: 14px;
+  padding: 5px 0 5px 22px;
+  position: relative;
+  line-height: 1.4;
+  color: var(--text-soft);
+}
+.vip-page .comp-card.sin ul li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: #c0392b;
+  font-weight: 700;
+}
+.vip-page .comp-card.con ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #1e7e34;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  .vip-page .comparativo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* OFERTA */
+.vip-page .oferta-box {
+  background: var(--deep);
+  color: #fff;
+  border-radius: 12px;
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.vip-page .oferta-box::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.vip-page .oferta-box .oferta-tag {
+  display: inline-block;
+  background: var(--jade);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+.vip-page .oferta-box h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  position: relative;
+}
+.vip-page .oferta-box h3 em {
+  color: var(--jade-light);
+  font-style: italic;
+}
+.vip-page .oferta-box .desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 28px;
+  position: relative;
+}
+.vip-page .oferta-box .desc strong {
+  color: #fff;
+}
+.vip-page .incluso-list {
+  list-style: none;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.vip-page .incluso-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.vip-page .incluso-list li:last-child {
+  border-bottom: none;
+}
+.vip-page .incluso-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--jade-light);
+  font-weight: 700;
+}
+.vip-page .no-incluso {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.42);
+  margin-bottom: 28px;
+  font-style: italic;
+  position: relative;
+}
+
+/* PRECIO */
+.vip-page .preco-ds {
+  position: relative;
+  margin-bottom: 28px;
+}
+.vip-page .preco-ds .de {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+.vip-page .preco-ds .por-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
+}
+.vip-page .preco-ds .valor {
+  font-family: "Outfit", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--jade-light);
+  line-height: 1;
+}
+.vip-page .preco-ds .valor sup {
+  font-size: 32px;
+  vertical-align: super;
+}
+.vip-page .preco-ds .detalhe {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+}
+.vip-page .preco-ds .detalhe strong {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA */
+.vip-page .btn-upsell {
+  background-color: #27af60;
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid #27af60;
+  font-size: 20px;
+  font-family: inherit;
+}
+.vip-page .decline-inline {
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* GARANTÍA */
+.vip-page .garantia-mini {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 10px;
+  padding: 24px;
+  margin-top: 24px;
+}
+.vip-page .garantia-mini .icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+.vip-page .garantia-mini h4 {
+  font-size: 16px;
+  color: var(--deep);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.vip-page .garantia-mini p {
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .vip-page .oferta-box {
+    padding: 32px 20px;
+  }
+  .vip-page .preco-ds .valor {
+    font-size: 56px;
+  }
+  .vip-page .garantia-mini {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
